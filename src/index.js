@@ -27,7 +27,6 @@ function onFormInput() {
             return;
         }
         if ((data.length >= 2) && (data.length <= 10)) {
-            console.log(data);
             //ref.list.insertAdjacentHTML('beforeend', createMarkupList(data));
             ref.info.innerHTML = "";
             ref.list.innerHTML = createMarkupList(data);
@@ -39,7 +38,6 @@ function onFormInput() {
         console.log(data.length)
     }).catch(err => {
         Notify.failure("Oops, there is no country with that name");
-        console.log(err);
     });
     //console.log(arr.length);
 }
