@@ -43,7 +43,8 @@ function onFormInput() {
 }
 
 function createMarkupList(arr) {
-    return arr.map(({flags, name}) => `<li><img src="${flags.svg}" alt="${name.common}"><h3>${name.common}</h3></li>`)
+    console.log(arr);
+    return arr.map(({ flags, name }) => `<li><img src="${flags.svg}" alt="${name.common}"><h3>${name.common}</h3></li>`).join("");
 }
 
 function createMarkupInfo(arr) {
@@ -57,5 +58,5 @@ function createMarkupInfo(arr) {
       <div><b>Capital: </b>${capital}</div>
       <div><b>Population: </b>${population}</div>
       <div><b>Languages: </b>${Object.values(languages).map(item => ` ${item}`)}</div>
-      `);
+      `).join();
 }
