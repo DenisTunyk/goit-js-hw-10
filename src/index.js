@@ -17,6 +17,8 @@ const DEBOUNCE_DELAY = 300;
 //console.log(fetchCountries("ukraine"));
 
 function onFormInput() {
+    ref.info.innerHTML = "";
+    ref.list.innerHTML = "";
     let country = ref.input.value.trim();
     if (country === "") {
         return;
